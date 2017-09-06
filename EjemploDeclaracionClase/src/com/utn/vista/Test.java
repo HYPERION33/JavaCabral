@@ -4,15 +4,15 @@ import com.utn.modelo.*;
 
 public class Test {
 	
-//	public static void main(String[] args) { // metodo para instancear a Persona
-//		
-//		Persona persona1;
-//		persona1 = new Persona();
-//		persona1.inicializar();
-//		persona1.imprimir();
-//		persona1.esMayorDeEdad();
-//		
-//	} descomentar para usar el ejemplo Persona
+	public static void main(String[] args) { // metodo para instancear a Persona
+		
+		Persona persona1;
+		persona1 = new Persona();
+		persona1.inicializar();
+		persona1.imprimir();
+		persona1.esMayorDeEdad();
+		
+	} //descomentar para usar el ejemplo Persona
 
 //	public static void main(String[] args) { //metodo para instancear a Triangulo
 //
@@ -34,11 +34,11 @@ public class Test {
 //	
 //	}	descomentar para usar el ejemplo Cuadrado
 
-	public static void main(String[] args) {
-        Punto punto1;
-        punto1=new Punto();
-        punto1.inicializar();
-        punto1.imprimirCuadrante();
-    }
+//	public static void main(String[] args) {
+//        Punto punto1;
+//        punto1=new Punto();
+//        punto1.inicializar();
+//        punto1.imprimirCuadrante();
+//    }
 
 }
