@@ -4,7 +4,7 @@ public class Jugador {
 
 	private String nombre;
 	private String apellido;
-	private boolean titular;
+	private boolean titular = true;
 	private String posicion;
 		
 	public Jugador(String nombre, String apellido, boolean titular, String posicion) {
