@@ -8,7 +8,7 @@ public class Club {
 
 	
 	
-	public Club(String nombre) {
+	public Club(String nombre) { //Constructor por defecto
 		this.nombre = nombre;
 		this.listaJugadores = new ArrayList<Jugador>();
 	}

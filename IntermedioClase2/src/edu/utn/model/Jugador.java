@@ -17,8 +17,8 @@ public class Jugador {
 	public String getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombre(String nombre2) {
+		this.nombre = nombre2;
 	}
 	public String getApellido() {
 		return apellido;
