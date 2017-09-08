@@ -6,7 +6,7 @@ public class Jugador {
 	private String apellido;
 	private int edad;
 	private int posicion;
-	private boolean titular;
+	private boolean titular = true;
 	
 	public String getNombre() {
 		return nombre;
@@ -39,7 +39,7 @@ public class Jugador {
 		this.titular = titular;
 	}
 	
-	public Jugador() {//constructor por defecto
+	public Jugador(String nombre, String apellido, int edad,int posicion, boolean titular ) {//constructor por defecto
 		
 		this.nombre="";
 		this.apellido="";
@@ -48,5 +48,8 @@ public class Jugador {
 		this.titular=false;
 	}
 	
-	
+	public String datosJugador() {
+		
+		return nombre + " " + apellido + " tiene " + edad + " años. " + "juega de " + posicion ;
+	}
 }

@@ -1,3 +1,4 @@
+
 package edu.utn.model;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ public class Club {
 
 	
 	
-	public Club(String nombre) {
+	public Club(String nombre) {// constructor de la clase club
 		this.nombre = nombre;
 		this.listaJugadores = new ArrayList<Jugador>();
 	}
@@ -19,7 +20,7 @@ public class Club {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public ArrayList<Jugador> getListaJugadores() {
+	public ArrayList<Jugador> getListaJugadores() {//get
 		return listaJugadores;
 	}
 	public void addJugador(Jugador jugador) {

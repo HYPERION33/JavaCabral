@@ -1,6 +1,8 @@
+
 package com.utn.modelo;
 
 public class CuerpoTecnico {
+	
 	
 	private String nombre;
 	private String apellido;
@@ -25,14 +27,12 @@ public class CuerpoTecnico {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	
 	public String getCargo() {
 		return cargo;
 	}
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-	
 	public CuerpoTecnico() {//constructor por defecto
 		
 		this.nombre="";
