@@ -5,9 +5,16 @@ public class Animales {
 	private String nombre;
 	private String tipo;
 	private String raza;
+	private double peso;
 	private int edad;
-	private String motivoDeConsulta;
 	
+	
+	public double getPeso() {
+		return peso;
+	}
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
 	
 	public String getNombre() {
 		return nombre;
@@ -33,20 +40,15 @@ public class Animales {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	public String getmotivoDeConsulta() {
-		return motivoDeConsulta;
-	}
-	public void setmotivoDeConsulta(String motivoDeConsulta) {
-		this.motivoDeConsulta = motivoDeConsulta;
+		
+	public Animales (String tipo,String nombre,String raza,int edad,double peso) {//constructor de animales
+		
+		this.tipo=tipo;
+		this.nombre=nombre;
+		this.raza=raza;
+		this.edad=edad;
+		this.peso=peso;	
 	}
 	
-	public Animales (String nombre,String tipo,String raza,int edad,String motivo) {//constructor de animales
-		
-		this.nombre="";
-		this.tipo="";
-		this.raza="";
-		this.edad=0;
-		this.motivoDeConsulta="";	
-	}
 	
 }

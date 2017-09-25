@@ -1,43 +1,44 @@
-package com.utn.modelo;
+package com.utn.modelo;	 
 
 public class Tratamiento {
 
 	private String medicamento;
-	private double precioMedicamento;
+	private double precioConsulta;
+	private String recom;
 	private String diag;
-
+	
 	public String getMedicamento() {
 		return medicamento;
 	}
 	public void setMedicamento(String medicamento) {
 		this.medicamento = medicamento;
 	}
-	public double getPrecioMedicamento() {
-		return precioMedicamento;
+	public double getPrecioConsulta() {
+		return precioConsulta;
 	}
-	public void setPrecioMedicamento(double precioMedicamento) {
-		this.precioMedicamento = precioMedicamento;
+	public void setPrecioConsulta(double precioConsulta) {
+		this.precioConsulta = precioConsulta;
 	}
-	public String getdiag() {
+	public String getRecom() {
+		return recom;
+	}
+	public void setRecom(String recom) {
+		this.recom = recom;
+	}
+	public String getDiag() {
 		return diag;
 	}
-	public void setdiag(String diag) {
+	public void setDiag(String diag) {
 		this.diag = diag;
 	}
 	
-	public Tratamiento (String diag, String medicamento, double precio) {//constructor de tratamiento
+	public Tratamiento(String diag, String recom, String medicamento, double precioConsulta) {
 		
-		this.diag="";
-		this.medicamento="";
-		this.precioMedicamento=0;
+		this.diag=diag;
+		this.recom=recom;
+		this.medicamento=medicamento;
+		this.precioConsulta=precioConsulta;
 		
 	}
 	
-	public void mostrarTratamiento() {
-		
-		System.out.println("El diagnostico medico es: " + getdiag());
-		System.out.println("El medicamento especifico es: " + getMedicamento());
-		System.out.println("Su costo es de: $" + getPrecioMedicamento());
-	}
-	//mostrar tratamiento	
 }
