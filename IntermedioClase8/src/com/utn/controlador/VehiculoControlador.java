@@ -8,7 +8,7 @@ import com.utn.modelo.Vehiculo;
 public class VehiculoControlador {
 
 
-	private Vehiculo[] vecLista = new Vehiculo[5];
+	private Vehiculo[] vecLista = new Vehiculo[5];//lo que queria agregar al tp
 	private int cont=0;
 	
 	public Vehiculo devuelvoVehiculoxPosicion(int index) {

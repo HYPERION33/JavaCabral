@@ -32,14 +32,19 @@ public class Test {
 		vehiculoLista.add(vc.creoVehiculo(TipoVehiculo.AUTO));
 		vehiculoLista.add(1234);
 		
+		for(int i=0; i < vehiculoLista.size(); i++) {
+			
+			System.out.println(vehiculoLista.get(i));
+		}
+		
 		//foreach 
 		for (Object item : vehiculoLista) {
 			//instance of 
 			
 			System.out.println(item.getClass());
-			
+						
 			if(item.getClass().getSimpleName().equals("Auto")) {
-				System.out.println("entramos en el fin del demonio");
+				System.out.println("entramos en el if del demonio");
 				((Auto)((Vehiculo)item)).doblar();
 				
 			}
@@ -48,7 +53,7 @@ public class Test {
 				Vehiculo objVehiculo = (Vehiculo) item;
 				objVehiculo.encender(new Diesel());
 
-				((Auto)((Vehiculo)item)).doblar();
+				((Auto)((Vehiculo)item)).doblar();//mejor opcion, doble casting y llamado de metodo
 				
 				((Auto)objVehiculo).doblar();;
 				
@@ -60,7 +65,7 @@ public class Test {
 		
 		
 		try {
-			vc.devuelvoVehiculoxPosicion(10).encender();;
+			vc.devuelvoVehiculoxPosicion(4).encender();
 		} catch (Exception e) {
 			System.out.println("Hugo un error");
 		}
