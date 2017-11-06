@@ -27,13 +27,10 @@ public class ListaController {
 		listaSet = new TreeSet<>(); // mas usada
 		listaSet = new LinkedHashSet<>();
 		
-
 		Map<String, String> mapa = null;
 		mapa = new HashMap<>(); // mas usada
 		mapa = new WeakHashMap<>();
 		mapa = new LinkedHashMap<>();
 		
-		
-
 	}
 }
