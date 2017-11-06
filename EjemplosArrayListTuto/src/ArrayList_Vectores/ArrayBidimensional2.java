@@ -1,4 +1,4 @@
-package com.utn.modelo;
+package ArrayList_Vectores;
 
 public class ArrayBidimensional2 {
 	
