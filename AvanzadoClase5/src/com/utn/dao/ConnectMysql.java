@@ -24,7 +24,7 @@ public class ConnectMysql {
 				System.out.println("Inserto bien");
 
 		} catch (Exception e) {
-			System.out.println("no se inserto");
+			System.out.println("No se inserto");
 			e.printStackTrace();
 		}
 		
