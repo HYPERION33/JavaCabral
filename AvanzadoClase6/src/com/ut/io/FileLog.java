@@ -8,9 +8,7 @@ public class FileLog extends Exception {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 3810147262503630445L;
-
-	
+	private static final long serialVersionUID = 6823776444449988888L;
 	private String mensaje;
 	
 	public FileLog(String mensaje) {

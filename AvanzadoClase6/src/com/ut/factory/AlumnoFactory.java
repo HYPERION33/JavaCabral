@@ -5,35 +5,37 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 import com.ut.dao.IConnection;
 import com.ut.dao.ITransactionDB;
 import com.ut.io.FileLog;
+import com.ut.modelo.Alumno;
 import com.ut.modelo.Materia;
 
-public class MateriaFactory implements ITransactionDB<Materia> {
+public class AlumnoFactory implements ITransactionDB<Alumno> {
+	
+	//por cada tabla una factoria, las factorias vana a implementar las interfaces de DAO
 
 	private IConnection connex;
 
-	public MateriaFactory() {
+	public AlumnoFactory() {
 		this.connex = new ConnectionFactory();
 	}
 
 	@Override
-	public List<Materia> getAll() throws ClassNotFoundException, SQLException {
+	public List<Alumno> getAll() throws ClassNotFoundException, SQLException {
 
-		List<Materia> lista = new ArrayList<>();
+		List<Alumno> lista = new ArrayList<>();
 		try {
 			
 			Statement st = (Statement) connex.getConnection().createStatement();
-			ResultSet rs =  st.executeQuery("select * from materias");
+			ResultSet rs =  st.executeQuery("select * from alumnos");
 			
 		
 			while(rs.next()) {
-				lista.add(new Materia(rs.getInt("id"), rs.getString("nombre")));
+				lista.add(new Alumno(rs.getInt("id"), rs.getInt("id_materia"), rs.getString("nombre"),rs.getInt("nota")));
 			}
 
 		} catch (FileLog e) {
@@ -44,13 +46,15 @@ public class MateriaFactory implements ITransactionDB<Materia> {
 	}
 
 	@Override
-	public boolean insert(Materia tobject) throws SQLException, ClassNotFoundException {
+	public boolean insert(Alumno tobject) throws SQLException, ClassNotFoundException {
 		
 		boolean res = false;
 		try {
-			String sql = "insert into materias (nombre) values (?)";
+			String sql = "insert into alumnos (id_materias,nombre,nota) values (?,?,?)";
 			PreparedStatement ps = (PreparedStatement) connex.getConnection().prepareStatement(sql);
-			ps.setString(1, tobject.getNombre());
+			ps.setInt(2, tobject.getId_materia());
+			ps.setString(3, tobject.getNombre());
+			ps.setInt(4, tobject.getNota());
 			
 			res = ps.execute();
 			
@@ -75,27 +79,27 @@ public class MateriaFactory implements ITransactionDB<Materia> {
 	}
 
 	@Override
-	public boolean delete(Materia tobject) {
+	public boolean delete(Alumno tobject) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean update(Materia tobject) {
+	public boolean update(Alumno tobject) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean update(Materia tobject, int id) {
+	public boolean update(Alumno tobject, int id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Materia get(int id) throws SQLException, ClassNotFoundException {
+	public Alumno get(int id) throws SQLException, ClassNotFoundException {
 		
-		Materia m = null;
+		Alumno a = null;
 		try {
 			
 			Statement st = (Statement) connex.getConnection().createStatement();
@@ -103,14 +107,14 @@ public class MateriaFactory implements ITransactionDB<Materia> {
 			
 		
 			while(rs.next()) {
-				 m = new Materia(rs.getInt("id"), rs.getString("nombre"));
+				 a = new Alumno(rs.getInt("id"), rs.getInt("id_materia"), rs.getString("nombre"), rs.getInt("nota"));
 			}
 
 		} catch (FileLog e) {
 			e.guardoErrorArchivoLog();
 		}
 
-		return m;
+		return a;
 	}
 
 }

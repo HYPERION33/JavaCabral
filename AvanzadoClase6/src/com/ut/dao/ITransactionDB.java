@@ -3,15 +3,11 @@ package com.ut.dao;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
-
 import com.mysql.jdbc.Connection;
 
 public interface ITransactionDB<T> {
 
-	
-
-
-	public T get(int id) throws SQLException, ClassNotFoundException;
+public T get(int id) throws SQLException, ClassNotFoundException;
 
 	public List<T> getAll() throws ClassNotFoundException, SQLException;
 

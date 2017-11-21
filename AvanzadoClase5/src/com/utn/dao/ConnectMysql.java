@@ -15,6 +15,8 @@ public class ConnectMysql {
 			Connection  conn = (Connection) 
 			DriverManager.getConnection("jdbc:mysql://localhost/utnavanzado","root","");
 			
+			
+			//meto el alumno en la base de dato, con un generico e slo optimo
 			PreparedStatement ps = conn.prepareStatement("insert into alumnos (nombre,materia,nota) values (?,?,?)");
 			ps.setString(1, "Rosana");
 			ps.setString(2, "java intermedio");

@@ -1,23 +1,22 @@
 package com.ut.vista;
 
-import com.ut.controller.MateriaController;
+import com.ut.controller.AlumnoController;
+import com.ut.modelo.Alumno;
 import com.ut.modelo.Materia;
 
 public class Test {
 
 	public static void main(String[] args) {
 
-		MateriaController mc = new MateriaController();
-		Materia m1 = new Materia();
-		m1.setNombre("java");
+		AlumnoController mc = new AlumnoController();
+		Alumno a1 = new Alumno(1,22,"PABLO",7);
 		
-		mc.insertoMateria(m1);
+		mc.insertoAlumno(a1);
 		
-		m1 = new Materia();
-		m1.setNombre(".net");
-		mc.insertoMateria(m1);
+		a1 = new Alumno(1,15,"VANESA",5);
+		mc.insertoAlumno(a1);
 		
-		mc.muestroMateriasCargadas();
+		mc.muestroAlumnoCursando();
 		
 	}
 

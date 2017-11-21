@@ -2,31 +2,32 @@ package com.ut.controller;
 
 import java.sql.SQLException;
 
-import com.ut.factory.MateriaFactory;
+import com.ut.factory.AlumnoFactory;
+import com.ut.modelo.Alumno;
 import com.ut.modelo.Materia;
 
-public class MateriaController {
+public class AlumnoController {
 
-	private MateriaFactory mf;
+	private AlumnoFactory af;
 	
-	public MateriaController() {
-		this.mf=new MateriaFactory();
+	public AlumnoController() {
+		this.af=new AlumnoFactory();
 	}
 	
 	
-	public void insertoMateria(Materia materia)
+	public void insertoAlumno(Alumno alum)
 	{
 		try {
-			mf.insert(materia);
+			af.insert(alum);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 	}
 	
 	
-	public void muestroMateriasCargadas() {
+	public void muestroAlumnoCursando() {
 		try {
-			for (Materia item : mf.getAll()) {
+			for (Alumno item : af.getAll()) {
 				System.out.println(item);
 			};
 		} catch (ClassNotFoundException | SQLException e) {
