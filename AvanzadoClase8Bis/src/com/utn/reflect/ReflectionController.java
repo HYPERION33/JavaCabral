@@ -9,7 +9,7 @@ import com.utn.modelo.Persona;
 
 public class ReflectionController {
 
-	public void noReflect() {
+	public void noReflect() {// para este ej. importamos el paquete Persona
 
 		Persona p = new Persona();
 		p.setNombre("Nahuel");
